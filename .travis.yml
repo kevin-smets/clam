@@ -1,0 +1,10 @@
+# basic config
+language: node_js
+node_js:
+  - "5.0.0"
+  - "4.2.2"
+  - "0.12"
+
+# after success script
+after_success:
+  - npm run coverage-report

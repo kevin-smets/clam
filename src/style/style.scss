@@ -1,0 +1,68 @@
+//@import "../../node_modules/iterm2-colors/functional/scss/Brogrammer";
+//@import "../../node_modules/iterm2-colors/functional/scss/Borland";
+@import "../../node_modules/iterm2-colors/functional/scss/Solarized Dark";
+//@import "../../node_modules/iterm2-colors/functional/scss/Solarized Light";
+
+body {
+  background-color: $background-color;
+  color: $foreground-color;
+  font-family: 'Source Code Pro';
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#log {
+  line-height: 16px;
+  white-space: pre-wrap;
+}
+
+.stdout {
+  padding: 5px;
+}
+
+.stdout + .stdout {
+  border-top: 1px solid darkslategray;
+  opacity: .6;
+}
+
+.stdout:first-child {
+  opacity: .8;
+}
+
+.stdout:last-child {
+  opacity: 1;
+}
+
+.prompt--home {
+  background-color: $blue-normal;
+}
+
+.prompt {
+  -webkit-clip-path: polygon(calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 0 100%, 11px 50%, 0 0);
+  clip-path: polygon(calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 0 100%, 11px 50%, 0 0);
+  box-sizing: border-box;
+  color: $black-normal;
+  display: inline-block;
+  padding: 0 15px 0 15px;
+  position: relative;
+  z-index: 3;
+}
+
+#input {
+  border: 0;
+  background: transparent;
+  color: $foreground-color;
+  font-family: "Helvetica";
+  font-size: 14px;
+  flex: 1;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+
+#input:focus {
+  outline: none;
+}
+
+.entry {
+  display: flex;
+}

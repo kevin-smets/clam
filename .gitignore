@@ -1,0 +1,7 @@
+.coveralls.yml
+
+coverage
+node_modules
+db/hiTerm.json
+
+www
