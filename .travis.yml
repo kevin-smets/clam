@@ -1,8 +1,9 @@
 # basic config
 language: node_js
 node_js:
-  - "5.0.0"
-  - "4.2.2"
+  - "6"
+  - "5"
+  - "4"
   - "0.12"
 
 # after success script
