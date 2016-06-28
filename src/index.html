@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="style/prompt.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
     <link href="style/search.css" rel="stylesheet">
+
     <link href="lib/highlightjs/solarized_dark.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300' rel='stylesheet' type='text/css'>
 </head>
@@ -15,13 +17,13 @@
         </div>
     </div>
     <div id="log"></div>
-    <div class="entry">
-        <div id="prompt" class="prompt prompt--home">~</div>
-        <input id="input" autofocus autocomplete="off">
+    <div class="prompt">
+        <div id="prompt" class="prompt__home">~</div>
+        <input id="input" class="prompt__input" autofocus autocomplete="off">
     </div>
-    <input type="submit" style="position: absolute; top: -100px" tabindex="-1">
+    <input class="submit" type="submit" tabindex="-1">
 </form>
 </body>
 <script type="text/javascript" src="script/script.js"></script>
-<script type="text/javascript" src="lib/highlightjs/highlight.pack.js"></script>
+<!--<script type="text/javascript" src="lib/highlightjs/highlight.pack.js"></script>-->
 </html>

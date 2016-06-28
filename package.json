@@ -1,7 +1,7 @@
 {
-  "name": "clam",
+  "name": "hiTerm",
   "version": "0.1.0",
-  "description": "Nothing yet",
+  "description": "An HTML5 terminal",
   "author": "kevin-smets",
   "license": "MIT",
   "scripts": {
@@ -11,23 +11,24 @@
     "coverage-report": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "devDependencies": {
-    "coveralls": "2.11.4",
-    "gulp": "3.9.0",
+    "coveralls": "2.11.9",
+    "gulp": "3.9.1",
     "gulp-debug": "2.1.2",
-    "gulp-live-server": "0.0.29",
-    "gulp-plumber": "1.0.1",
-    "gulp-sass": "2.1.0",
-    "istanbul": "0.4.1",
-    "iterm2-colors": "1.0.7",
-    "live-server": "0.8.2",
-    "mocha": "2.3.4",
-    "run-sequence": "1.1.5"
+    "gulp-live-server": "0.0.30",
+    "gulp-plumber": "1.1.0",
+    "gulp-sass": "2.3.2",
+    "istanbul": "0.4.4",
+    "iterm2-colors": "1.1.0",
+    "live-server": "1.0.0",
+    "mocha": "2.5.3",
+    "run-sequence": "1.2.1"
   },
   "dependencies": {
-    "app-root-path": "1.0.0",
-    "nedb": "1.5.0",
-    "promise": "7.0.4",
-    "shelljs": "0.5.3",
-    "yargs": "3.30.0"
+    "app-root-path": "1.2.1",
+    "electron-prebuilt": "1.2.5",
+    "nedb": "1.8.0",
+    "promise": "7.1.1",
+    "shelljs": "0.7.0",
+    "yargs": "4.7.1"
   }
 }

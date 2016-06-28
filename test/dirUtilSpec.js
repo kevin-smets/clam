@@ -40,15 +40,10 @@ describe('dirUtil', function() {
     });
 
     describe('#setPwd(dir)', function () {
-        it("should no change anything if no parameter is provided", function () {
-            var currentPwd = dirUtil.getPwd();
+        it("should default to the homeDir if no parameter is provided", function () {
             dirUtil.setPwd();
-            assert.equal(currentPwd, dirUtil.getPwd());
 
-            dirUtil.setPwd(dirUtil.getHomeDir());
             assert.equal(dirUtil.getPwd(), dirUtil.getHomeDir());
-
-            dirUtil.setPwd(dirUtil.getHomeDir());
         });
 
         it("should change to the home dir if it is provided", function () {
@@ -58,23 +53,29 @@ describe('dirUtil', function() {
         });
 
         it("should be able to change to an existing relative path", function () {
-            var home = dirUtil.getHomeDir();
             var newPwd = dirUtil.getDirectories(dirUtil.getHomeDir())[0];
 
-            dirUtil.setPwd(home);
+            dirUtil.setPwd();
             dirUtil.setPwd(newPwd);
 
-            assert.equal(path.join(home, newPwd), dirUtil.getPwd());
+            assert.equal(dirUtil.getPwd(), path.join(dirUtil.getHomeDir(), newPwd));
+        });
+
+        it("should be able to change to an existing absolute path", function () {
+            var newPwd = dirUtil.getDirectories(dirUtil.getHomeDir())[0];
+
+            dirUtil.setPwd(path.join(dirUtil.getHomeDir(), newPwd));
+
+            assert.equal(dirUtil.getPwd(), path.join(dirUtil.getHomeDir(), newPwd));
         });
 
         it("should not change to a non-existent path", function () {
-            var home = dirUtil.getHomeDir();
-            var nonExistentPath = "i/do/not/exist";
+            var nonExistentPath = "i/do/not/exist/i/think/hopefully";
 
-            dirUtil.setPwd(home);
+            dirUtil.setPwd();
             dirUtil.setPwd(nonExistentPath);
 
-            assert.equal(home, dirUtil.getPwd());
+            assert.equal(dirUtil.getHomeDir(), dirUtil.getPwd());
         });
     });
 

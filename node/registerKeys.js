@@ -1,8 +1,10 @@
 const ipc = require('electron').ipcMain;
 const path = require('path');
 const shell = require('shelljs');
+
 const dbUtil = require('./utils/dbUtil');
 const db = dbUtil.getDb();
+const dirUtil = require('./utils/dirUtil');
 
 module.exports = function () {
     ipc.on('key-tab', function (event, cmd) {
@@ -58,9 +60,11 @@ module.exports = function () {
         });
 
         // Exec the cmd
+        console.log(cmd);
         if (cmd.indexOf('cd') == 0) {
             var cdParam = cmd.split(' ')[1];
             var out = dirUtil.setPwd(cdParam);
+            console.log(out);
 
             if (!!out) {
                 event.sender.send('pwd', out);

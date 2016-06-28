@@ -42,22 +42,14 @@ const getPrompt = function (dir) {
  * @param pwd
  */
 const setPwd = function (pwd) {
-    if (!!pwd) {
-        if (pwd.indexOf('/') != 0) {
-            pwd = path.join(process.cwd(), pwd);
-        }
-
-        if (fs.existsSync(pwd)) {
-            shell.pushd(pwd);
-        }
-    }
+    shell.cd(pwd);
 };
 
 /**
  * Gets the process's pwd.
  */
 const getPwd = function () {
-    return process.cwd();
+    return shell.pwd();
 };
 
 /**
@@ -74,7 +66,7 @@ const getPwdAsPrompt = function () {
  * @returns [] Array of directories
  */
 function getDirectories(dirPath) {
-    return fs.readdirSync(dirPath).filter(function(file) {
+    return fs.readdirSync(dirPath).filter(function (file) {
         return fs.statSync(path.join(dirPath, file)).isDirectory();
     });
 }

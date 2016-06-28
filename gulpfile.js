@@ -8,7 +8,7 @@ const runSequence = require('run-sequence');
 var server = gls.static('www', 8080);
 
 gulp.task('serve', function () {
-     server.start();
+    server.start();
 });
 
 gulp.task("copy", function () {
@@ -25,7 +25,8 @@ gulp.task("sass", function () {
         .pipe(debug({title: 'sass-out: '}))
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
+    console.log('watching');
     gulp.watch('src/**/*.scss', ['sass']);
     gulp.watch(['src/**/*.html', 'src/**/*.js', "src/**/*.css"], ['copy']);
     gulp.watch(['www/**/*.css', 'www/**/*.html', 'www/**/*.js'], function (file) {
@@ -33,7 +34,7 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('default', function(callback){
+gulp.task('default', function (callback) {
     runSequence(
         ['copy', 'sass'],
         'serve',

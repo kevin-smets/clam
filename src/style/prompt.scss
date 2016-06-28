@@ -1,0 +1,44 @@
+//@import "../../node_modules/iterm2-colors/functional/scss/Brogrammer";
+//@import "../../node_modules/iterm2-colors/functional/scss/Borland";
+@import "../../node_modules/iterm2-colors/functional/scss/Solarized Dark";
+//@import "../../node_modules/iterm2-colors/functional/scss/Solarized Light";
+
+.prompt {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+}
+
+.prompt__home {
+  -webkit-clip-path: polygon(calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 0 100%, 11px 50%, 0 0);
+  clip-path: polygon(calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 0 100%, 11px 50%, 0 0);
+  background-color: $blue-normal;
+  box-sizing: border-box;
+  color: $black-normal;
+  display: inline-block;
+  padding: 0 15px 0 15px;
+  position: relative;
+  z-index: 3;
+}
+
+.prompt__input {
+  border: 0;
+  background: transparent;
+  color: $foreground-color;
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  flex: 1;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+
+.prompt__input:focus {
+  outline: none;
+}
+
+.submit {
+  left: -500px;
+  position: fixed;
+  top: -500px;
+  display: none;
+}

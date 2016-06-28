@@ -162,7 +162,7 @@
             pre.appendChild(text);
             log.appendChild(pre);
 
-            hljs.highlightBlock(pre); // TODO this has to become conditional, only actual code should be highlighted, e.g. after cat
+            // hljs.highlightBlock(pre); // TODO this has to become conditional, only actual code should be highlighted, e.g. after cat
         }
 
         window.scrollTo(0, document.body.scrollHeight);

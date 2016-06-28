@@ -9,6 +9,7 @@ body {
   font-family: 'Source Code Pro';
   font-size: 14px;
   line-height: 1.5;
+  padding-bottom: 40px;
 }
 
 #log {
@@ -33,36 +34,15 @@ body {
   opacity: 1;
 }
 
-.prompt--home {
-  background-color: $blue-normal;
-}
-
-.prompt {
-  -webkit-clip-path: polygon(calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 0 100%, 11px 50%, 0 0);
-  clip-path: polygon(calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 0 100%, 11px 50%, 0 0);
-  box-sizing: border-box;
-  color: $black-normal;
-  display: inline-block;
-  padding: 0 15px 0 15px;
-  position: relative;
-  z-index: 3;
-}
-
-#input {
-  border: 0;
-  background: transparent;
-  color: $foreground-color;
-  font-family: "Helvetica";
-  font-size: 14px;
-  flex: 1;
-  letter-spacing: 1px;
-  margin-left: 4px;
-}
-
-#input:focus {
-  outline: none;
-}
-
 .entry {
   display: flex;
+  position: fixed;
+  bottom: 10px;
+}
+
+.submit {
+  left: -500px;
+  position: fixed;
+  top: -500px;
+  display: none;
 }

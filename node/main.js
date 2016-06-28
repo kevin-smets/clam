@@ -1,6 +1,7 @@
-const app = require('app');                       // Controls the application life.
-const appRoot = require('app-root-path');         // Fetches the root dir of the app.
-const BrowserWindow = require('browser-window');  // Creates the native browser window.
+const appRoot = require('app-root-path');           // Fetches the root dir of the app.
+const electron = require('electron');
+const {app, BrowserWindow} = electron;
+
 const path = require('path');
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -17,7 +18,7 @@ app.on('window-all-closed', function () {
 });
 
 const createWindow = function () {
-    const screenSize = require('screen').getPrimaryDisplay().workAreaSize;
+    const screenSize = electron.screen.getPrimaryDisplay().workAreaSize;
 
     mainWindow = new BrowserWindow({
         'min-width': 640,

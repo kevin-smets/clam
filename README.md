@@ -1,5 +1,7 @@
 # Clam
 
+Keep clam and use the Html shell.
+
 ## Badgis!
 
 [![Build Status](https://travis-ci.org/kevin-smets/clam.svg?branch=master)](https://travis-ci.org/kevin-smets/clam)
@@ -34,9 +36,11 @@ npm run test
 npm run coverage
 ```
 
-## Posting coverage to coverall.io
+## Posting coverage to coveralls.io
 
-To do this from local development, create a .coveralls.yml file with the following content:
+Travis builds will push the coverage report to [coveralls.io](https://coveralls.io/github/kevin-smets/clam).
+
+To do this locally, create a .coveralls.yml file with the following content:
 
 ```
 service_name: travis-ci
@@ -45,16 +49,20 @@ repo_token: <repo-token-from-coveralls>
 
 # ToDo
 
-## Basic
+## RC1
 
 - ctrl - r to search cmd's
 - multiple windows / tabs
 - tab completion
 
-## RC1
+## RC2
     
 - Standalone installer / program
 - add version history / changelog
+
+## Nice to have
+
+- code color highlighting for cat
 
 ## Extended
 
@@ -70,6 +78,5 @@ repo_token: <repo-token-from-coveralls>
 - ~~setup testing and coverage~~
 - ~~up and down to cycle through cmd's~~
 - ~~use travis-cs~~
-- ~~use devid-dm~~
+- ~~use david-dm~~
 - ~~show pwd in term~~
-- ~~color highlighting~~
