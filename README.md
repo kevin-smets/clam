@@ -19,7 +19,7 @@ npm i
 ```
 
 ```
-gulp
+npm start
 ```
 
 In another term run

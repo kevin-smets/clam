@@ -5,6 +5,7 @@
   "author": "kevin-smets",
   "license": "MIT",
   "scripts": {
+    "start": "gulp",
     "electron": "electron node/main.js",
     "test": "istanbul test ./node_modules/mocha/bin/_mocha",
     "coverage": "npm run test --coverage",
