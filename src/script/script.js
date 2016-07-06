@@ -1,5 +1,5 @@
 (function () {
-  var form, input, searchInput, searchResults, searchWrapper, ipc, log, prompt, specialKeys;
+  var form, input, ipc, log, prompt, specialKeys;
 
   // Main (Electron) process
   ipc = require('electron').ipcRenderer;
@@ -7,9 +7,6 @@
   // DOM elements
   form = document.getElementById("form");
   input = document.getElementById("input");
-  searchInput = document.getElementById("search__input");
-  searchResults = document.getElementById("search__results");
-  searchWrapper = document.getElementById("search__wrapper");
   log = document.getElementById("log");
   prompt = document.getElementById("prompt");
 
@@ -49,14 +46,6 @@
         specialKeys.shiftKey = true;
     }
 
-    if (e.ctrlKey) {
-      if (e.which == 82) { // R
-        searchWrapper.style.transform = 'none';
-        searchInput.focus();
-        e.preventDefault();
-      }
-    }
-
     var sendKey = function (e, key, data) {
       ipc.send('key-' + key, data);
       e.preventDefault();
@@ -87,23 +76,6 @@
 
     if (e.which == 17)
       specialKeys.ctrlKey = false;
-  });
-
-  /**
-   * Processes speshiul keys such as tab, up, down, ctrl, alt, shift...
-   */
-  searchInput.addEventListener('keyup', function (e) {
-    if (e.which == 27) { // Esc
-      searchWrapper.style.transform = 'translateY(-100%)';
-      input.focus();
-      e.preventDefault();
-    }
-
-    if (searchInput.value != "") {
-      ipc.send('search', searchInput.value);
-    } else {
-      searchResults.innerHTML = "";
-    }
   });
 
   /**
