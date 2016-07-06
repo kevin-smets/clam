@@ -1,14 +1,12 @@
-//@import "../../node_modules/iterm2-colors/functional/scss/Brogrammer";
-//@import "../../node_modules/iterm2-colors/functional/scss/Borland";
-@import "../../node_modules/iterm2-colors/functional/scss/Solarized Dark";
-//@import "../../node_modules/iterm2-colors/functional/scss/Solarized Light";
-
 .prompt {
-  bottom: 10px;
-  display: flex;
-  left: 10px;
+  background: $background-color;
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  min-height: $prompt-height;
+  padding: 10px;
   position: fixed;
-  right: 10px;
+  right: 0;
 }
 
 .prompt__home {

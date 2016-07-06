@@ -1,40 +1,29 @@
 //@import "../../node_modules/iterm2-colors/functional/scss/Brogrammer";
 //@import "../../node_modules/iterm2-colors/functional/scss/Borland";
-@import "../../node_modules/iterm2-colors/functional/scss/Solarized Dark";
-//@import "../../node_modules/iterm2-colors/functional/scss/Solarized Light";
+//@import "../../node_modules/iterm2-colors/functional/scss/Solarized Dark";
+@import "../../node_modules/iterm2-colors/functional/scss/Solarized Light";
+
+@import "variables";
+@import "prompt";
 
 body {
-  background-color: $background-color;
+  background-color: $foreground-color;
   color: $foreground-color;
-  font-family: 'Source Code Pro';
+  font-family: 'Source Code Pro', sans-serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.3;
   margin: 0;
-  margin-bottom: 80px;
 }
 
 #log {
-  line-height: 16px;
+  padding-bottom: $prompt-height + 20px;
   white-space: pre-wrap;
 }
 
 .stdout {
-  box-shadow: 0 0 10px $foreground-color;
-  // box-sizing: border-box;
-  margin: 0;
-  opacity: .6;
-  padding: .5em;
-  // width: calc(33% - 10px);
-
-  &:last-child {
-    opacity: 1;
-  }
-}
-
-.entry {
-  display: flex;
-  position: fixed;
-  bottom: 10px;
+  background: $background-color;
+  margin: .3em;
+  padding: .3em;
 }
 
 .submit {
