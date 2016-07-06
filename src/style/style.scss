@@ -9,7 +9,8 @@ body {
   font-family: 'Source Code Pro';
   font-size: 14px;
   line-height: 1.5;
-  padding-bottom: 40px;
+  margin: 0;
+  margin-bottom: 80px;
 }
 
 #log {
@@ -18,20 +19,16 @@ body {
 }
 
 .stdout {
-  padding: 5px;
-}
-
-.stdout + .stdout {
-  border-top: 1px solid darkslategray;
+  box-shadow: 0 0 10px $foreground-color;
+  // box-sizing: border-box;
+  margin: 0;
   opacity: .6;
-}
+  padding: .5em;
+  // width: calc(33% - 10px);
 
-.stdout:first-child {
-  opacity: .8;
-}
-
-.stdout:last-child {
-  opacity: 1;
+  &:last-child {
+    opacity: 1;
+  }
 }
 
 .entry {

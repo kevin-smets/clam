@@ -4,9 +4,11 @@
 //@import "../../node_modules/iterm2-colors/functional/scss/Solarized Light";
 
 .prompt {
-  display: flex;
-  position: fixed;
   bottom: 10px;
+  display: flex;
+  left: 10px;
+  position: fixed;
+  right: 10px;
 }
 
 .prompt__home {

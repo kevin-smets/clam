@@ -17,15 +17,16 @@
     "gulp-debug": "^2.1.2",
     "gulp-live-server": "^0.0.30",
     "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.3",
     "gulp-sass": "^2.3.2",
     "istanbul": "^0.4.4",
     "iterm2-colors": "^1.1.0",
     "live-server": "^1.0.0",
     "mocha": "^2.5.3",
-    "run-sequence": "^1.2.1"
+    "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "app-root-path": "^1.2.2",
+    "app-root-path": "^1.2.1",
     "electron-prebuilt": "^1.2.6",
     "nedb": "^1.8.0",
     "promise": "^7.1.1",
